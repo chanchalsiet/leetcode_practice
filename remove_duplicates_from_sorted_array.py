@@ -26,12 +26,14 @@ Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
 Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
 It does not matter what you leave beyond the returned k (hence they are underscores)."""
 
+print(len(nums))
+print(nums)
 def removeDuplicates(nums):
     i = 0
     while i < len(nums):
-        if nums[i] == nums[i-1]:
+        if nums[i] == nums[i - 1] and len(nums)>1:
             nums.pop(i)
         else:
-            i +=1
+            i += 1
 
     return (len(nums))
